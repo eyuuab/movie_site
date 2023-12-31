@@ -1,5 +1,3 @@
-// MovieDetail.js
-
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./details.css"; // Import the CSS file for styling
@@ -33,23 +31,29 @@ const MovieDetail = () => {
   const { title, overview, release_date, vote_average, poster_path } = movie;
 
   return (
-   <>
-   <Navbar/>
-    <div className="movie-detail-container">
-
-<div className="movie-detail-content">
-  <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title} />
-  <div className="movie-detail-info">
-          <div className="movie-detail-header">
-          <h1>{title}</h1>
+    <>
+      <Navbar /> {/* Render the Navbar component */}
+      <div className="movie-detail-container">
+        {/* Container for the movie details */}
+        <div className="movie-detail-content">
+          {/* Content of the movie details */}
+          <img
+            src={`https://image.tmdb.org/t/p/w500${poster_path}`}
+            alt={title}
+          />
+          {/* Display the movie poster */}
+          <div className="movie-detail-info">
+            {/* Container for the movie information */}
+            <div className="movie-detail-header">
+              <h1>{title}</h1> {/* Display the movie title */}
+            </div>
+            <p className="overview">{overview}</p> {/* Display the movie overview */}
+            <p>Release Date: {release_date}</p> {/* Display the movie release date */}
+            <p>Rating: {vote_average}</p> {/* Display the movie rating */}
           </div>
-    <p className="overview">{overview}</p>
-    <p>Release Date: {release_date}</p>
-    <p>Rating: {vote_average}</p>
-  </div>
-</div>
-</div>
-</>
+        </div>
+      </div>
+    </>
   );
 };
 

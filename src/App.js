@@ -1,6 +1,5 @@
 import './App.css';
 import Navbar from './components/Header/navbar';
-import MovieCard from './components/MovieCard';
 import MovieList from './components/MoiveList'
 import { BrowserRouter as Router } from "react-router-dom";
 import { Switch, Route, Routes } from "react-router-dom";
@@ -18,8 +17,10 @@ const AppRoutes = () => {
   return (
     <>
       <Routes>
+        {/* assign a path and the page to be displated when the user routes to that path */}
         <Route path="/" element={<Home />} />
         <Route path="/movie/:id" element={<MovieDetail/>}/>
+        {/* more routes can be written here (for new,cartoon and other links on the navbar) */}
 
       </Routes>
     </>
