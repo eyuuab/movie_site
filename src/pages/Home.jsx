@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Header/navbar'
-import MovieList from '../components/MoiveList'
+import MovieList from '../components/movies/MoiveList'
 
 const Home = () => {
   return (

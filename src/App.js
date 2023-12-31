@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './components/Header/navbar';
-import MovieList from './components/MoiveList'
+import MovieList from './components/movies/MoiveList'
 import { BrowserRouter as Router } from "react-router-dom";
 import { Switch, Route, Routes } from "react-router-dom";
 import Home from './pages/Home';
@@ -12,7 +12,6 @@ function App() {
 }
 
 const AppRoutes = () => {
-
 
   return (
     <>

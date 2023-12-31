@@ -1,0 +1,57 @@
+.movie-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+.movie-card {
+  width: 300px;
+  margin: 20px;
+  border: 1px solid #d3e5fa;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 2px 14px rgba(50, 49, 49, 0.4);
+  cursor: pointer;
+
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+
+}
+
+.movie-poster {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.movie-detail {
+  padding: 15px;
+}
+
+.movie-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.movie-title {
+  font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  font-size: 1.35rem; /* Increase the font size */
+  margin-bottom: 6px; /* Adjust the margin */
+  font-weight: bold; /* Make the text bold */
+  color: #6e6b6b; /* Set the text color */
+  text-align: center; /* Center-align the text */
+  
+}
+
+.movie-rating,
+.movie-year {
+  font-size: 1rem;
+  margin-bottom: 3px;
+  color: #555; /* Set the text color */
+}

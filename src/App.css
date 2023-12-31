@@ -15,9 +15,21 @@
     margin-top: 3rem;
 }
 
-.loadmore{
-    width: 30%;
+.loadmore {
+    width: 120px; /* Adjust the width as needed */
     padding: 10px;
-    margin-bottom: 10rem;
-    margin-top: 3rem;
-}
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .loadmore:hover {
+    background-color: #0056b3; /* Change color on hover */
+  }
+  
