@@ -1,0 +1,43 @@
+/* MovieDetail.css */
+
+.movie-detail-container {
+    background-color: #111;
+    color: #fff;
+    padding:5px;
+  }
+  
+  .movie-detail-header {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    width: fit-content;
+  }
+  
+  .movie-detail-content {
+    display: flex;
+    justify-content:space-around;
+    align-items: flex-center;
+  }
+  
+  .movie-detail-info {
+
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .overview {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  /* Add material-style shadow to the image */
+  .movie-detail-content img {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  

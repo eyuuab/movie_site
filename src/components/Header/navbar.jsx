@@ -1,11 +1,12 @@
 import React from 'react';
-import logo from '../logo.png';
-import search from '../search.png';
-import notification from '../notification.png';
-import user from '../user.png';
-
+import logo from './logo.png';
+import search from './search.png';
+import notification from './notification.png';
+import user from './user.png';
+import './navbar.css'
 const Navbar = () => {
   return (
+    <div className="app">
     <div className="container">
       <nav className="navbar">
         <img className="logo" src={logo} alt="Logo" />
@@ -33,6 +34,7 @@ const Navbar = () => {
             <img className="icon" src={user} alt="User Icon" />
           </button></div>
       </nav>
+    </div>
     </div>
   );
 };

@@ -1,26 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
-import Navbar from './components/navbar';
-import MovieCard from './components/movieCard';
-import Movie from './components/movies/Movie'
+import Navbar from './components/Header/navbar';
+import MovieCard from './components/MovieCard';
+import MovieList from './components/MoiveList'
+import { BrowserRouter as Router } from "react-router-dom";
+import { Switch, Route, Routes } from "react-router-dom";
+import Home from './pages/Home';
+import MovieDetail from './components/Detail_page/MovieDetail';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Navbar/>
-      </header>
-      <div className='moviecardContainer' >
-        <MovieCard rating={7.5} year="2023" movieTitle='uncharted' cardImage="https://cdn.dribbble.com/users/1910217/screenshots/4148858/media/998c2bd5b012e0bc2cacb951523b655f.png"/>
-        <MovieCard rating={7.5} year="2023" movieTitle='uncharted' cardImage="https://cdn.dribbble.com/users/1910217/screenshots/4148858/media/998c2bd5b012e0bc2cacb951523b655f.png"/>
-        <MovieCard rating={7.5} year="2023" movieTitle='uncharted' cardImage="https://cdn.dribbble.com/users/1910217/screenshots/4148858/media/998c2bd5b012e0bc2cacb951523b655f.png"/>
-        <MovieCard rating={7.5} year="2023" movieTitle='uncharted' cardImage="https://cdn.dribbble.com/users/1910217/screenshots/4148858/media/998c2bd5b012e0bc2cacb951523b655f.png"/>
-        <MovieCard rating={7.5} year="2023" movieTitle='uncharted' cardImage="https://cdn.dribbble.com/users/1910217/screenshots/4148858/media/998c2bd5b012e0bc2cacb951523b655f.png"/>
-        <MovieCard rating={7.5} year="2023" movieTitle='uncharted' cardImage="https://cdn.dribbble.com/users/1910217/screenshots/4148858/media/998c2bd5b012e0bc2cacb951523b655f.png"/>
-      </div>
-      <Movie/>
-
-    </div>
+    <AppRoutes/>
   );
 }
+
+const AppRoutes = () => {
+
+
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/movie/:id" element={<MovieDetail/>}/>
+
+      </Routes>
+    </>
+  );
+};
 
 export default App;

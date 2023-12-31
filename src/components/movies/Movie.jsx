@@ -19,7 +19,7 @@ function Movie() {
     const fetchMovies = async () => {
       try {
         const response = await fetch(
-          `https://api.themoviedb.org/3/search/movie?api_key=d417ec99ff4c14074a17bb24cec84529&query=${searchTerm}`
+          `https://api.themoviedb.org/3/movie/now_playing?api_key=d417ec99ff4c14074a17bb24cec84529`
         );
         const data = await response.json();
 
