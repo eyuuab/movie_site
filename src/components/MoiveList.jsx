@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import MovieCard from "./MovieCard";
+import MovieCard from './movieCard'
+
 import "./MovieCard.css";
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
-  const [page,setPage] =  useState(1)
+  const [page,setPage] =  useState(1)//this is used to track the number of pages loaded from the api
 
   const fetchMovies = async () => {
     try {
@@ -16,7 +17,9 @@ const MovieList = () => {
       const data = await response.json();
 
       setMovies([...movies,...data.results]); // Assuming the movie data is in the 'results' property
-      setPage(page+1)
+      //here the newly fetched data(list of movies) is added to the previous list of movies if there is any. otherwise it will be appended to an empty array
+      //this is helpful when implementing the load-more feature below.
+      setPage(page+1)//since the useEffect is executed twice during the mounting  process,increase pagecount by one to avoid duplicate loading.
     } catch (error) {
       console.error("Error fetching movies:", error);
     }
@@ -26,6 +29,7 @@ const MovieList = () => {
   }, []); // The empty dependency array ensures that this effect runs once when the component mounts
 
   const loadmore =()=>{
+    //when loadmore button is clicked, the fetchmovies() function executes with pagenumber of 'page+1'(next page)
     const newPage  =  page+1
     setPage(newPage)
     fetchMovies()

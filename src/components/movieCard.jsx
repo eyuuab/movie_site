@@ -7,11 +7,10 @@ const MovieCard = ({ movie }) => {
   if (!movie) {
     return null; // Or you can render a placeholder, an error message, etc.
   }
-  const { title, vote_average, release_date, overview, poster_path } = movie;
+  const { title, vote_average, release_date, overview, poster_path } = movie;//destructure usesful data from the movie object
 
   return (
-    <div style={{display:"flex",flexDirection:'column'}}>
-    <Navbar/>
+      // each card when clicked routes to a new url with the id of that specific movie
     <Link to={`/movie/${movie.id}`} key={movie.id}>
       <div className="movie-card">
         <img
@@ -26,7 +25,6 @@ const MovieCard = ({ movie }) => {
         </div>
       </div>
       </Link>
-    </div>
 
   );
 };
