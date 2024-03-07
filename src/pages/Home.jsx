@@ -2,11 +2,11 @@ import React from 'react'
 import Navbar from '../components/Header/navbar'
 import MovieList from '../components/movies/MoiveList'
 
-const Home = () => {
+const Home = ({ updateChoies }) => {
   return (
     <div>
-      <Navbar/>
-      <MovieList/>
+      <Navbar updateChoies={updateChoies} />
+      <MovieList />
     </div>
   )
 }

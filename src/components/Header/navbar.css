@@ -67,12 +67,13 @@
   }
   
   .searchinput {
-    padding: 10px;
-    height: 160%;
-    border-radius: 50px;
-    border: 1px solid #ccc;
-    margin-right: 5px;
-  }
+  width: 200px;
+  padding: 10px;
+  height: 160%;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+}
   
   .searchButton {
     padding: 20px 20px;
@@ -91,8 +92,8 @@
     
   }
   .searchIcon{
-    height:1rem;
-    width:1rem;
+    height:1.3rem;
+    width:1.3rem;
   }
   
   
@@ -102,10 +103,15 @@
   
   .iconButton {
     padding: 5px;
+    cursor: pointer;
     margin-left: 5px;
     border:none;
     border-radius: 50%;
     background-color: transparent;
+  }
+  .iconButton:hover {
+    color: rgb(21, 208, 161); /* Change the color to black when hovering */
+    cursor: pointer;
   }
   .more{
     display: flex;
