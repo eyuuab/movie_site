@@ -61,11 +61,9 @@ const MovieList = () => {
       {movies.length > 0 ? (
         <>
         {movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
-
         </>
-
-
-      ) : (
+      ):
+      (
         <p>Loading...</p>
       )}
     </div>
