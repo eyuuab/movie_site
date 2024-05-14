@@ -7,7 +7,7 @@ import './navbar.css';
 const Navbar = ({ updateChoies }) => {
   const handlePreferenceClick = (preference) => {
     updateChoies(preference);
-    // Add any other logic related to handling the preference click
+
   };
 
   return (
