@@ -4,7 +4,7 @@ import MovieList from './components/movies/MoiveList'
 import { BrowserRouter as Router } from "react-router-dom";
 import { Switch, Route, Routes } from "react-router-dom";
 import Home from './pages/Home';
-import MovieDetail from './components/Detail_page/MovieDetail';
+import MovieDetail from './pages/Detail_page/MovieDetail';
 function App() {
   return (
     <AppRoutes/>

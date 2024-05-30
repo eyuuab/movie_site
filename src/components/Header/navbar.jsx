@@ -4,11 +4,14 @@ import search from './search.png';
 import notification from './notification.png';
 import user from './user.png';
 import './navbar.css';
+import { useDispatch } from 'react-redux';
+import { setCategory } from '../../redux/features/category/catergorySlice';
+
 const Navbar = ({ updateChoies }) => {
-  const handlePreferenceClick = (preference) => {
-    updateChoies(preference);
-    // Add any other logic related to handling the preference click
-  };
+  const dispatch = useDispatch();
+  const handleCategoryChange = (category) => {
+    dispatch(setCategory(category));
+  }
 
   return (
     <div className="app">
@@ -16,11 +19,11 @@ const Navbar = ({ updateChoies }) => {
         <nav className="navbar">
           <img className="logo" src={logo} alt="Logo" />
           <ul className="links">
-            <li className="link" onClick={() => handlePreferenceClick('new')}>New</li>
-            <li className="link" onClick={() => handlePreferenceClick('movies')}>Movies</li>
-            <li className="link" onClick={() => handlePreferenceClick('cartoons')}>Cartoons</li>
-            <li className="link" onClick={() => handlePreferenceClick('tvShows')}>TVShows</li>
-            <li className="link" onClick={() => handlePreferenceClick('documentary')}>Documentary</li>
+            <li className="link" onClick={() => handleCategoryChange('new')}>New</li>
+            <li className="link" onClick={() => handleCategoryChange('movie/now_playing')}>Movies</li>
+            <li className="link" onClick={() => handleCategoryChange('cartoons')}>Cartoons</li>
+            <li className="link" onClick={() => handleCategoryChange('discover/tv')}>TVShows</li>
+            <li className="link" onClick={() => handleCategoryChange('documentary')}>Documentary</li>
           </ul>
 
           <div className="search">

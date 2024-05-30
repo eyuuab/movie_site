@@ -1,6 +1,11 @@
-import { createStore } from 'redux';
-import rootReducer from './reducers';
+// src/store.js
+import { configureStore } from '@reduxjs/toolkit';
+import categoryReducer from './features/category/catergorySlice';
 
-const store = createStore(rootReducer);
+const store = configureStore({
+  reducer: {
+    category: categoryReducer,
+  },
+});
 
 export default store;

@@ -1,28 +1,10 @@
 import React, { useState, useEffect } from "react";
 import MovieCard from './movieCard'
-import NavBar from '../Header/navbar';
 import "./MovieCard.css";
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
-  const [choies, setChoies] = useState('tv/top_rated');
-  const [page,setPage] =  useState(1)//this is used to track the number of pages loaded from the api
-
-  const updateChoies = (preference) => {
-    if (preference === 'new') {
-      setChoies('movie/upcoming');
-    } 
-    else if (preference === 'movies') {
-      setChoies('movie/now_playing');
-    }
-    else if (preference === 'tvShows') {
-      setChoies('tv/top_rated');
-    } 
-    else {
-      // handle other preferences
-      setChoies('tv/top_rated');
-    }
-  };
+  const [page,setPage] =  useState(1)           //this is used to track the number of pages loaded from the api
 
   const fetchMovies = async () => {
     try {
@@ -30,7 +12,11 @@ const MovieList = () => {
       const apiKey = '71000f68fdc86c5ff57acfc67deb4e50';
       const endpoint = 'https://api.themoviedb.org/3/';
       const choies = 'movie/now_playing';
-      const response = await fetch(`${endpoint}${choies}?page=${page}&&api_key=${apiKey}`);
+
+      const response = await fetch(
+        `${endpoint}${choies}?page=${page}&&api_key=${apiKey}`
+      );
+
       console.log("this is the curernt page",page)
       const data = await response.json();
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./details.css"; // Import the CSS file for styling
-import Navbar from "../Header/navbar";
+import Navbar from "../../components/Header/navbar";
 
 const MovieDetail = () => {
   const { id } = useParams();
