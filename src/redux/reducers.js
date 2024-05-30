@@ -1,18 +1,17 @@
-import { UPDATE_CHOIES } from "./types";
-
 const initialState = {
-  choies: "tv/top_rated",
+  choices: 'tv/top_rated',
 };
-const rootReducer = (state = initialState, action) => {
+
+const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case UPDATE_CHOIES:
+    case 'UPDATE_CHOICES':
       return {
         ...state,
-        choies: action.payload,
+        choices: action.payload,
       };
     default:
       return state;
   }
 };
 
-export default rootReducer;
+export default reducer;

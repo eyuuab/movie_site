@@ -1,8 +1,9 @@
-import { UPDATE_CHOIES } from "./types";
+import React from 'react'
 
-export const updateChoies = (choices) => {
-    return {
-        type: UPDATE_CHOIES,
-        payload: choices
-    };
-};
+export default function action() {
+  return (
+    <div>
+      
+    </div>
+  )
+}
